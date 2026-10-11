@@ -1,0 +1,17 @@
+{
+  "name": "dropped-sample-counter",
+  "version": "0.1.0",
+  "description": "Tracks dropped events by reason code and reports periodic aggregate counts.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
