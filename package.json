@@ -1,6 +1,6 @@
 {
   "name": "dropped-sample-counter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tracks dropped events by reason code and reports periodic aggregate counts.",
   "type": "module",
   "main": "src/index.js",
