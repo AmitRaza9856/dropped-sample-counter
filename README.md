@@ -32,3 +32,10 @@ The core trade-off: everything lives in memory. If the process crashes between f
 `flush()` resets all reason counters to zero. This is deliberate so each report represents drops since the previous flush. If you need cumulative totals, keep your own running sum of the emitted reports.
 
 An empty counter (no records recorded, or all flushed) flushes to `{ timestamp, reasons: [] }` — not `null` — so downstream consumers never need a null check.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
